@@ -1,0 +1,75 @@
+{
+  "source_is_synthetic": true,
+  "rows": 10000,
+  "features": [
+    "Air temperature [K]",
+    "Process temperature [K]",
+    "Rotational speed [rpm]",
+    "Torque [Nm]",
+    "Tool wear [min]",
+    "Type"
+  ],
+  "excluded_ids": [
+    "UDI",
+    "Product ID"
+  ],
+  "excluded_auxiliary_targets": [
+    "TWF",
+    "HDF",
+    "PWF",
+    "OSF",
+    "RNF"
+  ],
+  "split": [
+    {
+      "split": "train",
+      "rows": 8000,
+      "udi_start": 1,
+      "udi_end": 8000,
+      "failures": 300,
+      "failure_pct": 3.75
+    },
+    {
+      "split": "holdout",
+      "rows": 2000,
+      "udi_start": 8001,
+      "udi_end": 10000,
+      "failures": 39,
+      "failure_pct": 1.95
+    }
+  ],
+  "random_state": 42,
+  "max_depth": 3,
+  "min_samples_leaf": 20,
+  "class_weight": "balanced",
+  "actual_tree_depth": 3,
+  "tree_leaves": 8,
+  "scores": [
+    {
+      "method": "majority_baseline",
+      "accuracy": 0.9805,
+      "balanced_accuracy": 0.5,
+      "failure_precision": 0.0,
+      "failure_recall": 0.0,
+      "failure_f1": 0.0,
+      "true_negative": 1961,
+      "false_positive": 0,
+      "false_negative": 39,
+      "true_positive": 0
+    },
+    {
+      "method": "shallow_tree",
+      "accuracy": 0.914,
+      "balanced_accuracy": 0.7802272519253652,
+      "failure_precision": 0.1366120218579235,
+      "failure_recall": 0.6410256410256411,
+      "failure_f1": 0.22522522522522523,
+      "true_negative": 1803,
+      "false_positive": 158,
+      "false_negative": 14,
+      "true_positive": 25
+    }
+  ],
+  "note": "Source-order holdout of synthetic current-condition labels; no dated future warning horizon or calibrated risk.",
+  "run_seconds": 1.181
+}

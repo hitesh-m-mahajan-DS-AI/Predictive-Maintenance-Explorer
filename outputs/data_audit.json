@@ -1,0 +1,22 @@
+{
+  "source_url": "https://archive.ics.uci.edu/static/public/601/ai4i%2B2020%2Bpredictive%2Bmaintenance%2Bdataset.zip",
+  "source_sha256": "dc6630cd9b1f0f853922fad78a1b6436570d3f1ec863f1dd5c4340ac56bc8a8e",
+  "source_is_synthetic": true,
+  "rows": 10000,
+  "missing_values": 0,
+  "duplicate_udi": 0,
+  "duplicate_product_id": 0,
+  "type_counts": {
+    "L": 6000,
+    "M": 2997,
+    "H": 1003
+  },
+  "target_counts": {
+    "0": 9661,
+    "1": 339
+  },
+  "flag_union_disagreements": 27,
+  "failure_label_without_flag": 9,
+  "flag_without_failure_label": 18,
+  "label_handling": "Retain published Machine failure labels unchanged; no relabeling from auxiliary flags."
+}

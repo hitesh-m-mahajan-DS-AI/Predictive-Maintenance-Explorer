@@ -1,0 +1,3 @@
+method,accuracy,balanced_accuracy,failure_precision,failure_recall,failure_f1,true_negative,false_positive,false_negative,true_positive
+majority_baseline,0.9805,0.5,0.0,0.0,0.0,1961,0,39,0
+shallow_tree,0.914,0.7802272519253652,0.1366120218579235,0.6410256410256411,0.22522522522522523,1803,158,14,25
